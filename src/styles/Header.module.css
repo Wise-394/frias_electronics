@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.header p:first-of-type {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: var(--font-display);
+}
+
+.header nav {
+  padding-right: 2rem;
+  margin-left: auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.header .active {
+  color: var(--primary-color);
+}

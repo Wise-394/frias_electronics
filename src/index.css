@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+}
+
+:root {
+  --font-main: "Montserrat", sans-serif;
+  --font-display: "Archivo Black", sans-serif;
+  --primary-color: rgb(126, 233, 233);
+}
+
+body {
+  background-color: rgb(26, 24, 24);
+  font-family: var(--font-main);
+}
