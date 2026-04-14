@@ -1,40 +1,26 @@
-import { useEffect, useState } from "react";
+import { useRouteLoaderData, useNavigation } from "react-router";
 import ShopItem from "./ShopItem";
+import styles from "@styles/Shop.module.css";
 
-function ShopList() {
-  const [products, setProducts] = useState([]);
+function ShopList({ setCart }) {
+  const products = useRouteLoaderData("root");
+  const navigation = useNavigation();
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const categories = ["laptops", "smartphones"];
-        const requests = categories.map((cat) =>
-          fetch(`https://dummyjson.com/products/category/${cat}`).then((res) =>
-            res.json(),
-          ),
-        );
-
-        const results = await Promise.all(requests);
-        const combinedProducts = results.flatMap((result) => result.products);
-
-        setProducts(combinedProducts);
-      } catch (error) {
-        console.error("Failed to fetch products:", error);
-      }
-    };
-
-    fetchProducts();
-  }, []);
+  if (navigation.state === "loading") {
+    return <p>Loading please wait</p>;
+  }
 
   return (
-    <div>
+    <div className={styles.itemGrid}>
       {products.map((product) => (
         <ShopItem
           data-testid="shop-item"
           key={product.id}
+          id={product.id}
           title={product.title}
           price={product.price}
           image={product.images[0]}
+          setCart={setCart}
         />
       ))}
     </div>

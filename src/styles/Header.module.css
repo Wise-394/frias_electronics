@@ -4,6 +4,11 @@
   height: 8vh;
   padding: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgb(26, 24, 24);
 }
 .header p:first-of-type {
   font-weight: 600;
@@ -22,4 +27,12 @@
 
 .active {
   color: var(--primary-color);
+}
+
+.cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }

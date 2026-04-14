@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 import styles from "@styles/Header.module.css";
 import { IoMdCart } from "react-icons/io";
 
-function Header() {
+function Header({ cart }) {
   return (
     <header className={styles.header}>
       <p className={styles.logo}>FRIAS</p>
@@ -23,9 +23,12 @@ function Header() {
 
         <NavLink
           to="/cart"
-          className={({ isActive }) => (isActive ? styles.active : "")}
+          className={({ isActive }) =>
+            `${styles.cart} ${isActive ? styles.active : ""}`
+          }
         >
           <IoMdCart />
+          <p>{cart.length > 0 && cart.length}</p>
         </NavLink>
       </nav>
     </header>
