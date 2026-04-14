@@ -11,6 +11,9 @@
   --font-display: "Archivo Black", sans-serif;
   --primary-color: rgb(126, 233, 233);
 }
+html {
+  font-size: clamp(14px, 1.5vw, 16px);
+}
 
 body {
   background-color: rgb(26, 24, 24);

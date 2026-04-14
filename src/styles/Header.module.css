@@ -7,17 +7,19 @@
 }
 .header p:first-of-type {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: var(--font-display);
 }
 
-.header nav {
-  padding-right: 2rem;
+.nav {
+  padding-right: 1rem;
   margin-left: auto;
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 5vw, 4rem);
 }
 
-.header .active {
+.active {
   color: var(--primary-color);
 }

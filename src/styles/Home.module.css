@@ -4,8 +4,25 @@
   justify-content: center;
   align-items: center;
   height: 92vh;
+  text-align: center;
+  gap: 2rem;
+  padding: 2rem;
 }
 
-h1 {
+.container h1 {
   font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.container h2 {
+  color: rgb(150, 150, 150);
+  font-size: 1rem;
+}
+
+.container a {
+  padding: 1rem 4rem;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
 }

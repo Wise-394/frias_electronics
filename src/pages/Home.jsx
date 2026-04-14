@@ -3,8 +3,8 @@ import { Link } from "react-router";
 function Home() {
   return (
     <main className={styles.container}>
-      <h1>FRIAS SHOP.</h1>
-      <h2>Smart gadgets for a smarter you.</h2>
+      <h1>FRIAS ELECTRONICS.</h1>
+      <h2>SMART GADGETS FOR A SMARTER YOU.</h2>
       <Link to="/shop">Buy Now</Link>
     </main>
   );
