@@ -1,21 +1,15 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import path from "path";
-import { fileURLToPath } from "url";
+import { resolve } from "path";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { cloudflare } from "@cloudflare/vite-plugin";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), cloudflare()],
   resolve: {
     alias: {
-      "@styles": path.resolve(__dirname, "./src/styles"),
-      "@": path.resolve(__dirname, "./src"),
+      "@styles": resolve("src/styles"),
+      "@": resolve("src"),
     },
-  },
-  test: {
-    environment: "jsdom",
-    globals: true,
   },
 });
