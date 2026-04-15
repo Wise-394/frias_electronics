@@ -1,18 +1,70 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ⚡ Frias Electronics
 
-Currently, two official plugins are available:
+**A fully functional electronics shop web app where users can browse products, manage their cart, and explore the latest gadgets — all powered by a live API and built with a modern React stack.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/)
+[![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)](https://vitest.dev/)
 
-## React Compiler
+[Live Demo](https://frias.jrdumlao.com)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+</div>
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Live Product Listings** — Shop items are fetched in real time from an external API, so the catalog is always dynamic and up to date
+- **Client-Side Routing** — Seamless, instant page transitions using React Router with no full-page reloads
+- **Shopping Cart** — Add, remove, and manage items directly from the product pages
+- **Product Detail Pages** — Each item has its own dedicated page with full details fetched from the API
+- **Responsive Design** — Fully optimized layout for both desktop and mobile screen sizes
+- **Test-Driven Development** — Every feature was written test-first using Vitest, ensuring reliable and maintainable code throughout the entire project
+
+---
+
+## 🖼️ Preview
+ 
+<div align="center">
+ 
+**Web**
+ 
+<img width="800" alt="Frias Electronics web preview" src="https://github.com/user-attachments/assets/3394b7b4-d9ab-4940-9bdb-84989f33ba42" />
+ 
+<br/>
+ 
+**Mobile**
+ 
+<img width="350" alt="Frias Electronics mobile preview" src="https://github.com/user-attachments/assets/c5701d5d-9ffd-44ff-9672-3e3e3613eb58" />
+ 
+</div>
+
+---
+
+## 🧪 Testing Approach
+
+Frias Electronics was built from the ground up using **Test-Driven Development (TDD)**. Rather than writing tests after the fact, each feature started with a failing test — then implementation followed to make it pass. This discipline kept the codebase predictable, caught bugs early, and made refactoring far less risky.
+
+Testing was done with **[Vitest](https://vitest.dev/)**, a blazing-fast unit test framework built for the Vite ecosystem. Tests cover:
+
+- **Component rendering** — asserting that UI elements appear correctly under various conditions
+- **User interactions** — simulating clicks, navigation, and cart actions
+- **API integration** — verifying that fetched data is correctly handled, displayed, and error-handled
+- **Routing behavior** — ensuring the correct page components render at the correct routes
+
+---
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/) — Component-based UI library for building the entire frontend
+- [React Router](https://reactrouter.com/) — Declarative client-side routing for multi-page navigation
+- [Vitest](https://vitest.dev/) — Fast, Vite-native test runner used throughout TDD development
+- External Shop API — Supplies all product data including names, prices, images, and descriptions
+
+---
+
+## ⚠️ Disclaimer
+
+This is a personal learning project built for practice and portfolio purposes. Product data is sourced from a third-party API and is not affiliated with any real retail operation.
