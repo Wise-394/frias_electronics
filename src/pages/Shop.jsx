@@ -5,7 +5,6 @@ function Shop() {
   const [cart, setCart] = useOutletContext();
   return (
     <main className={styles.container}>
-      <p>Shop</p>
       <ShopList cart={cart} setCart={setCart} />
     </main>
   );

@@ -7,6 +7,7 @@ function ShopItem({
   image,
   ["data-testid"]: testId,
   setCart,
+  category,
 }) {
   const [count, setCount] = useState(1);
 
@@ -33,26 +34,34 @@ function ShopItem({
 
   return (
     <div data-testid={testId} className={styles.itemCard}>
-      <img src={image} alt={title} />
-      <p>{title}</p>
-      <p data-testid="price">${price}</p>
-      <div className={styles.countContainer}>
-        <div onClick={decrement}>
-          <button>-</button>
-        </div>
-        <div>
-          <p data-testid="count">{count}</p>
-        </div>
-        <div onClick={increment}>
-          <button>+</button>
-        </div>
+      <div className={styles.imgContainer}>
+        <img src={image} alt={title} />
       </div>
-      <button
-        className={styles.cartButton}
-        onClick={() => addToCart(id, title, price, image, count)}
-      >
-        ADD TO CART
-      </button>
+      <div className={styles.infoContainer}>
+        <p>{title}</p>
+        <p className={styles.category}>{category}</p>
+        <p data-testid="price" className={styles.price}>
+          ${price}
+        </p>
+        <div className={styles.countContainer}>
+          <div onClick={decrement}>
+            <button>-</button>
+          </div>
+          <div>
+            <p data-testid="count">{count}</p>
+          </div>
+          <div onClick={increment}>
+            <button>+</button>
+          </div>
+        </div>
+
+        <button
+          className={styles.cartButton}
+          onClick={() => addToCart(id, title, price, image, count)}
+        >
+          ADD TO CART
+        </button>
+      </div>
     </div>
   );
 }

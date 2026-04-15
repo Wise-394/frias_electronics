@@ -10,6 +10,11 @@ function Cart() {
     0,
   );
 
+  const handleCheckout = () => {
+    alert("Success! Your order has been placed.");
+    setCart([]);
+  };
+
   return (
     <main className={styles.container}>
       {cart.length === 0 ? (
@@ -29,7 +34,9 @@ function Cart() {
           ))}
           <div className={styles.totalCard}>
             <p>Total: {totalAmount.toFixed(2)}</p>
-            <button>Checkout</button>
+            <button onClick={handleCheckout} className={styles.checkoutBtn}>
+              Checkout
+            </button>
           </div>
         </>
       )}

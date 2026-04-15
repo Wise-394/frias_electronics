@@ -21,6 +21,7 @@ function ShopList({ setCart }) {
           price={product.price}
           image={product.images[0]}
           setCart={setCart}
+          category={product.category}
         />
       ))}
     </div>
