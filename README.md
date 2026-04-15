@@ -21,7 +21,7 @@
 - **Shopping Cart** — Add, remove, and manage items directly from the product pages
 - **Product Detail Pages** — Each item has its own dedicated page with full details fetched from the API
 - **Responsive Design** — Fully optimized layout for both desktop and mobile screen sizes
-- **Test-Driven Development** — Every feature was written test-first using Vitest, ensuring reliable and maintainable code throughout the entire project
+- **Test-Driven Development** — Every feature was written test-first using Vitest, ensuring reliable and maintainable code
 
 ---
 
@@ -45,14 +45,13 @@
 
 ## 🧪 Testing Approach
 
-Frias Electronics was built from the ground up using **Test-Driven Development (TDD)**. Rather than writing tests after the fact, each feature started with a failing test — then implementation followed to make it pass. This discipline kept the codebase predictable, caught bugs early, and made refactoring far less risky.
+Frias Electronics was built from the ground up using **Test-Driven Development (TDD)**
 
 Testing was done with **[Vitest](https://vitest.dev/)**, a blazing-fast unit test framework built for the Vite ecosystem. Tests cover:
 
 - **Component rendering** — asserting that UI elements appear correctly under various conditions
 - **User interactions** — simulating clicks, navigation, and cart actions
 - **API integration** — verifying that fetched data is correctly handled, displayed, and error-handled
-- **Routing behavior** — ensuring the correct page components render at the correct routes
 
 ---
 
